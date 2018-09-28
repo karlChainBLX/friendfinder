@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dating - Express</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Dating- Express</h1>
+      <p1>Fill out the form and allocate your 100 charm coins. Spend more coins on what is important to you and less on what is not important for you. If you feel like it you can spend all you 100 charm coins on one question, but we recomand not to do it to find better matches </p1>
+      <hr>
+      <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> back to date search</button></a>
+    </div>
+    <div class="row">
+
+      <div class="col-12">
+
+        <div class="card">
+          <div class="card-header">
+            <h3><strong>Add your self to the lucky list</strong></h3>
+          </div>
+          <div class="card-body">
+            <form method="POST" role="form">
+
+              <div class="form-group">
+                <label for="name">What is your name?</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+
+
+              <div class="checkbox">
+                
+                <label for="gender"> Are you a man  </label> 
+                <input type="radio"   id="gender">  
+              </div>
+
+              <div class="form-group">
+                <label for="email">Please give us a email (or any other way to be contacted)</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+
+              <div class="form-group">
+                <label for="myAge">How old are you?</label>
+                <input type="text" class="form-control" id="myAge">
+              </div>
+
+              <div class="form-group">
+                <label for="ageMin">What can be the minimum age of your date</label>
+                <input type="text" class="form-control" id="ageMin">
+              </div>
+
+              <div class="form-group">
+                <label for="ageMax">What can be the maxium age of your date</label>
+                <input type="text" class="form-control"  id="ageMax">
+              </div>
+
+              <div class="checkbox">
+                  <label for="model"> I am super good looking</label> 
+                  <input type="checkbox"   id="model">  
+                </div>
+
+              
+                <div class="checkbox">
+                    <label for="pretty"> I am very good looking and skinny </label> 
+                    <input type="checkbox"  id="pretty">  
+                  </div>
+
+              <div class="checkbox">
+                      <label for="normal"> I am very good looking but robuts </label> 
+                      <input type="checkbox"   id="normal">  
+                    </div>
+            
+              <div class="checkbox">
+                        <label for="normaltwo"> I am good looking  </label> 
+                        <input type="checkbox"  id="normaltwo">  
+                      </div>
+
+              <div class="checkbox">
+                        <label for="normalugly"> I am avrage looking  </label> 
+                        <input type="checkbox"   id="normalugly">  
+                      </div>
+              
+              <div class="checkbox">
+                          <label for="verylugly"> I know I am not ugly but ...  </label> 
+                          <input type="checkbox"   id="veryugly">  
+                        </div>
+                        
+              <div class="checkbox">
+                            <label for="fatnotugly"> I know I am fat, but not ugly ...  </label> 
+                            <input type="checkbox"   id="fatnotugly">  
+                          </div>
+              
+              <div class="checkbox">
+                              <label for="ugly"> I know I am ugly , but very fun to be with  </label> 
+                              <input type="checkbox"   id="ugly">  
+                            </div>
+
+
+
+              <div class="checkbox">
+                              <label for="fatandugly"> I know I am fat and ugly ...  </label> 
+                              <input type="checkbox"   id="fatandugly">  
+                            </div>
+
+              <div class="container">
+                <div class="jumbotron">
+                  <h1>Time to spend your Charm Coins </h1>
+                  <h1>But remember you only have one hundert (100) </h1>
+                  <h1>Spend it whise and you will find your perfect Date </h1>
+                  <p1>Fill out the form and allocate your 100 charm coins. Spend more coins on what is important to you and less on what is not important for you. If you feel like it you can spend all you 100 charm coins on one question, but we recomand not to do it to find better matches </p1>
+                  <hr>
+
+                  <div class="form-group">
+                      <label for="Qpaydate">How much charm coins you spend that your date pics up the bill </label>
+                      <input type="number"   id="Qpaydate">
+                    </div>
+
+                  <div class="form-group">
+                        <label for="Qyoupay">How much charm coins you spend want to spend and pay your dates bill </label>
+                        <input type="number"   id="Qyoupay">
+                      </div>
+
+                  <div class="form-group">
+                    <label for="QageMin">How much charm coins you spend to enforce your min date range </label>
+                    <input type="number"   id="QageMin">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="QageMax">How much charm coins you spend to enforce your max date range </label>
+                      <input type="number"  id="QageMax">
+                    </div>
+                   
+                 <div class="form-group">
+                        <label for="QageMax">How much charm coins you spend to date a person which is super good looking  </label>
+                        <input type="number"   id="QageMax">
+                      </div>
+
+                      <div class="checkbox">
+                          <label for="Qnormalugly"> How much charm coins you spend to date a person who is avrage looking  </label> 
+                          <input type="number"   id="Qnormalugly">  
+                        </div>
+                
+                <div class="checkbox">
+                            <label for="Qverylugly"> How much charm coins you spend to date a person who is ugly but ...  </label> 
+                            <input type="number"   id="Qveryugly">  
+                          </div>
+                          
+                <div class="checkbox">
+                              <label for="Qfatnotugly"> How much charm coins you spend to date a person who knows that he is fat, but not ugly ...  </label> 
+                              <input type="number"   id="Qfatnotugly">  
+                            </div>
+                
+                <div class="checkbox">
+                                <label for="Qugly"> How much charm coins you spend to date a person who is not good looking but fun  </label> 
+                                <input type="number"   id="Qugly">  
+                              </div>
+  
+  
+  
+                <div class="checkbox">
+                                <label for="Qfatandugly"> How much charm coins you spend to date a person which says he is fat and ugly ...  </label> 
+                                <input type="number"   id="Qfatandugly">  
+                              </div>
+                
+                
+                <div class="form-group">
+                                  <label for="Qyouspeak"> How much charm coins you spend to have a good listner  </label> 
+                                  <input type="number"   id="Qyouspeak">  
+                                </div>
+                 
+                <div class="form-group">
+                                    <label for="Qdatespeak"> How much charm coins you spend to be a good listner  </label> 
+                                    <input type="number"   id="Qdatespeak">  
+                                  </div>
+                              
+                <div class="form-group">
+                                      <label for="Qdclub"> How much charm coins you spend to go to a expensive club </label> 
+                                      <input type="number"   id="Qdclub">  
+                                    </div>
+                
+                <div class="form-group">
+                                        <label for="Qdinner"> How much charm coins you spend to go to a expensive dinner </label> 
+                                        <input type="number"   id="Qdinner">  
+                                      </div>
+              
+                <div class="form-group">
+                                          <label for="Qfood"> How much charm coins you spend to go to just to eat </label> 
+                                          <input type="number"   id="Qdinner">  
+                                        </div>
+
+               <div class="form-group">
+                                            <label for="Qbar"> How much charm coins you spend to go to just to a bar </label> 
+                                            <input type="number"   id="Qbar">  
+                                          </div>
+
+              <div class="form-group">
+                                              <label for="Qpark"> How much charm coins you spend to go to a amusment park </label> 
+                                              <input type="number"   id="Qpark">  
+                                            </div>
+
+                                      
+                </div>
+
+            </form>
+            <br>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Only press button if you are ready to date within  3-4 hours  </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // Question: What does this code do?
+    $("#add-btn").on("click", function(event) {
+      event.preventDefault();
+      var newCharacter = {
+        name: $("#name").val().trim(),
+        email: $("#email").val().trim(),
+        gender: $("#gender").val().trim(), 
+        myAge: $("#myAge").val().trim(),
+        ageMin: $("#ageMin").val().trim(),
+        ageMax: $("#ageMax").val().trim(),
+        model: $("#model").val().trim(),
+        pretty: $("#pretty").val().trim(),
+        normal: $("#normal").val().trim(),
+        normaltwo: $("#normaltwo").val().trim(),
+        normalugly: $("#normalugly").val().trim(),
+        veryugly: $("#veryugly").val().trim(),
+        fatnotugly: $("#fatnotugly").val().trim(),
+        fatandugly: $("#fatandugly").val().trim(),
+        Qpaydate: $("#Qpaydate").val().trim(),
+        QageMin: $("#QageMin").val().trim(),
+        QageMax: $("#QageMax").val().trim(),
+        Qnormalugly: $("#normalugly").val().trim(),
+        Qveryugly: $("#Qveryugly").val().trim(),
+        Qfatnotugly: $("#Qfatnotugly").val().trim(),
+        Qugly: $("#Qugly").val().trim(),
+        Qfatandugly: $("#Qfatandugly").val().trim(),
+        Qyouspeak: $("#Qyouspeak").val().trim(),
+        Qdatespeak: $("#Qdatespeak").val().trim(),
+        Qdclub: $("#Qdclub").val().trim(),
+        Qdinner: $("#Qdinner").val().trim(),
+        Qbar: $("#Qbar").val().trim(),
+        Qpark: $("#Qpark").val().trim()
+
+      };
+
+      // Question: What does this code do??
+      $.post("/api/characters", newCharacter)
+        .then(function(data) {
+          console.log("add.html", data);
+          alert("Adding you...");
+        });
+    });
+  </script>
+
+</body>
+</html>

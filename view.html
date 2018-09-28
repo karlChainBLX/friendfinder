@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dating - Express</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      
+      <h1>Just have fun tonight!!! </h1>
+      <h2>or stay home alone... </h2>
+     <font color="red"> 
+     
+      
+      <h4>No data ever stored in a database and only available for 30 min</h4>
+      <h4>Best matches through inovative one-of-a-kind matching system</h4>
+      <h4>It's Free! </h4>
+      </font>
+      <font color="grey"> 
+      <p1>It's really easy! We don't have any database and don't save your data. Your profile is only online for 30 min max. All you have to do is 1) sign up, 2) spend a free allotment of 100 Charm Coins at any attributes your date should have, 3) then answer some questions about yourself and you are done. We give you and your match eachother's email. Then you can email eachother to set up the date for tonight. </p1>
+    <p1> Do you know that our match is the best way to match you for the first encounter? Than let your instinct guide you. Just date safely! Use an email account which you open only for Express Date. Don't give any private information. Meet in a public place. Just...you know...be safe and have fun. As always, date at your own risk. This application is not written for actual dating services, but was written as a requirement for a programming excercise. Most of all, be polite and respectfull with your date. </p1>
+      </font>
+    <hr>
+      <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Sign Up Now and Date Tonight</button></a>
+    
+    </div>
+    <div class="row">
+
+      <div class="col-12">
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3><strong> Search your match for tonight</strong></h3>
+          </div>
+          <div class="card-body">
+             
+            <br>
+            <div class="text-leftt">
+              <p1> As new users constantly join and leave, press the "search your date" button again to run an updated search. To start a relationship the most important thing is that you and your date have fun. This means you both most be in the mood to do the same thing today. As moods change and can't be planned in advance, we only allow dates which start within 3 hours after sign up. For the same reason we also allow your current profile to exsist for only a half an hour. </p1>
+              <button type="search" class="btn btn-primary btn-md" id="search-btn"><span class="fa fa-search"></span> 
+                Your date is waiting here</button>
+                 
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3><strong>You are matched with:</strong></h3>
+          </div>
+          <div class="card-body">
+            <h2 id="name">Your Future Date</h2>
+            <div id="stats">
+              <h3><strong>Role:</strong> <span id="role">email@email.com</span></h3>
+              <h3><strong>Age:</strong> <span id="age">25</span></h3>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    $("#search-btn").on("click", function() {
+      var searchedCharacter = $("#character-search").val().trim();
+
+      // Using a RegEx Pattern to remove spaces from searchedCharacter
+      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+
+      $.get("/api/characters/" + searchedCharacter, function(data) {
+        console.log(data);
+        if (data) {
+          $("#stats").show();
+          $("#name").text(data.name);
+          $("#role").text(data.role);
+          $("#age").text(data.age);
+          
+        }
+        else {
+          $("#name").text("It seems we have a problem and you will be alone tonight. Sorry go sleep");
+          $("#stats").hide();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
